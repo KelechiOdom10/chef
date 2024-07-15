@@ -76,10 +76,7 @@
   {
     "id": 395,
     "title": "Next.js",
-    "category": [
-      "Framework",
-      "Vercel"
-    ],
+    "category": ["Framework", "Vercel"],
     "route": "https://svgl.app/library/nextjs_icon_dark.svg",
     "wordmark": {
       "light": "https://svgl.app/library/nextjs_logo_light.svg",
@@ -157,10 +154,7 @@
   {
     "id": 410,
     "title": "Turso",
-    "category": [
-      "Database",
-      "Software"
-    ],
+    "category": ["Database", "Software"],
     "route": {
       "light": "https://svgl.app/library/turso-light.svg",
       "dark": "https://svgl.app/library/turso-dark.svg"
@@ -184,10 +178,7 @@
   {
     "id": 394,
     "title": "Vercel",
-    "category": [
-      "Hosting",
-      "Vercel"
-    ],
+    "category": ["Hosting", "Vercel"],
     "route": {
       "light": "https://svgl.app/library/vercel.svg",
       "dark": "https://svgl.app/library/vercel_dark.svg"
@@ -385,10 +376,7 @@
   {
     "id": 191,
     "title": "WordPress",
-    "category": [
-      "CMS",
-      "Software"
-    ],
+    "category": ["CMS", "Software"],
     "route": "https://svgl.app/library/wordpress.svg",
     "url": "https://wordpress.org/"
   },
@@ -425,5 +413,26 @@
       "dark": "https://svgl.app/library/copilot_dark.svg"
     },
     "url": "https://github.com/features/copilot"
+  },
+  {
+    "id": 405,
+    "title": "Resend",
+    "category": "Software",
+    "url": "https://resend.com/",
+    "route": {
+      "light": "https://svgl.app/library/resend-icon-black.svg",
+      "dark": "https://svgl.app/library/resend-icon-white.svg"
+    },
+    "wordmark": {
+      "light": "https://svgl.app/library/resend-wordmark-black.svg",
+      "dark": "https://svgl.app/library/resend-wordmark-white.svg"
+    }
+  },
+  {
+    "id": 399,
+    "title": "Raindrop.io",
+    "category": "Software",
+    "route": "https://svgl.app/library/raindrop.svg",
+    "url": "https://raindrop.io/"
   }
 ]
