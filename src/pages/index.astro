@@ -163,12 +163,12 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
           {
             dailyTools.map(tool => (
-              <li class="flex justify-between items-center group p-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5">
+              <li>
                 <Link
                   href={tool.url}
                   external
                   aria-label={tool.title}
-                  className="flex items-center gap-3 no-underline"
+                  className="flex relative group p-2  items-center gap-3 no-underline rounded-md hover:bg-black/5 dark:hover:bg-white/5"
                 >
                   <Image
                     class="hidden dark:block size-8"
@@ -204,22 +204,21 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
                       {tool.description}
                     </span>
                   </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="size-3.5 hidden group-hover:block absolute top-1/2 right-2 -translate-y-1/2 stroke-2 fill-none stroke-current"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
                 </Link>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  class="size-3.5 hidden group-hover:block"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
               </li>
             ))
           }
