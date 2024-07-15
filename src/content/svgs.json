@@ -434,5 +434,12 @@
     "category": "Software",
     "route": "https://svgl.app/library/raindrop.svg",
     "url": "https://raindrop.io/"
+  {
+    "id": 83,
+    "title": "Bun",
+    "category": "Library",
+    "route": "https://svgl.app/library/bun.svg",
+    "url": "https://bun.sh"
+  },
   }
 ]
