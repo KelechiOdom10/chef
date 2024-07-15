@@ -32,11 +32,21 @@ const work = await Promise.all(
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
+    <div class="flex items-center space-x-3">
+      <Image
+        width={64}
+        height={64}
+        src="/kelechi.jpeg"
+        alt="Kelechi Odom"
+        class="w-16 h-16 rounded-full animate object-cover"
+        loading="eager"
+      />
       <div class="space-y-1">
         <h4 class="font-semibold text-black dark:text-white">
           Hi, I'm Kelechi <span class="text-xl">👋🏽</span>
     </h4>
         <p class="text-opacity-55 text-[15px]">Product Engineer</p>
+      </div>
       </div>
     <div class="space-y-16">
       <section>
