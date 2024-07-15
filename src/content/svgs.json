@@ -5,28 +5,36 @@
     "category": "Music",
     "route": "https://svgl.app/library/spotify.svg",
     "wordmark": "https://svgl.app/library/spotify_wordmark.svg",
-    "url": "https://www.spotify.com/"
+    "url": "https://www.spotify.com/",
+    "description": "Music streaming service",
+    "daily": true
   },
   {
     "id": 29,
     "title": "Figma",
     "category": "Design",
     "route": "https://svgl.app/library/figma.svg",
-    "url": "https://www.figma.com/"
+    "url": "https://www.figma.com/",
+    "description": "Design tool",
+    "daily": true
   },
   {
     "id": 22,
     "title": "Visual Studio Code",
     "category": "Software",
     "route": "https://svgl.app/library/vscode.svg",
-    "url": "https://code.visualstudio.com/"
+    "url": "https://code.visualstudio.com/",
+    "description": "Code editor",
+    "daily": true
   },
   {
     "id": 280,
     "title": "Warp",
     "category": "Software",
     "route": "https://svgl.app/library/warp.svg",
-    "url": "https://www.warp.dev/"
+    "url": "https://www.warp.dev/",
+    "description": "AI-powered terminal",
+    "daily": true
   },
   {
     "id": 49,
@@ -96,7 +104,9 @@
     "title": "Notion",
     "category": "Software",
     "route": "https://svgl.app/library/notion.svg",
-    "url": "https://notion.so/"
+    "url": "https://notion.so/",
+    "description": "All-in-one workspace",
+    "daily": true
   },
   {
     "id": 354,
@@ -106,14 +116,18 @@
       "light": "https://svgl.app/library/1password-light.svg",
       "dark": "https://svgl.app/library/1password-dark.svg"
     },
-    "url": "https://1password.com"
+    "url": "https://1password.com",
+    "description": "Password manager",
+    "daily": true
   },
   {
     "id": 342,
     "title": "Claude AI",
     "category": "AI",
     "route": "https://svgl.app/library/claude-ai.svg",
-    "url": "https://claude.ai/"
+    "url": "https://claude.ai/",
+    "description": "Enough said",
+    "daily": true
   },
   {
     "id": 329,
@@ -121,7 +135,9 @@
     "category": "Software",
     "route": "https://svgl.app/library/slack.svg",
     "wordmark": "https://svgl.app/library/slack-wordmark.svg",
-    "url": "https://www.slack.com"
+    "url": "https://www.slack.com",
+    "description": "Collaboration platform",
+    "daily": true
   },
   {
     "id": 281,
@@ -135,7 +151,9 @@
     "title": "Chrome",
     "category": "Browser",
     "route": "https://svgl.app/library/chrome.svg",
-    "url": "https://chrome.com/"
+    "url": "https://chrome.com/",
+    "description": "Web browser",
+    "daily": true
   },
   {
     "id": 76,
@@ -433,7 +451,8 @@
     "title": "Raindrop.io",
     "category": "Software",
     "route": "https://svgl.app/library/raindrop.svg",
-    "url": "https://raindrop.io/"
+    "url": "https://raindrop.io/",
+    "daily": true
   },
   {
     "id": 83,
@@ -447,6 +466,7 @@
     "title": "Notes",
     "category": "Library",
     "route": "/tools/apple-notes.svg",
-    "url": "https://www.icloud.com/notes"
+    "url": "https://www.icloud.com/notes",
+    "daily": true
   }
 ]
