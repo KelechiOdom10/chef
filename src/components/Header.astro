@@ -1,33 +1,24 @@
 ---
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
-import { SITE } from "@consts";
 ---
 
 <header>
   <Container>
     <div class="flex flex-wrap gap-y-2 justify-between">
       <Link href="/" underline={false}>
-        <div class="font-semibold">
-          {SITE.NAME}
-        </div>
+        <div class="font-semibold">KO.</div>
       </Link>
       <nav class="flex gap-1">
-        <Link href="/blog">
-          blog
-        </Link>
+        <Link href="/work"> work </Link>
         <span>
           {`/`}
         </span>
-        <Link href="/work">
-          work
-        </Link>
+        <Link href="/projects"> projects </Link>
         <span>
           {`/`}
         </span>
-        <Link href="/projects">
-          projects
-        </Link>
+        <Link href="/tools"> toolkit </Link>
       </nav>
     </div>
   </Container>
