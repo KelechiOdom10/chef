@@ -8,10 +8,7 @@ import Link from "@components/Link.astro";
 import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
 
-const blog = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+import tools from "@data/svgs.json";
 
 const projects = (await getCollection("projects"))
   .filter(project => !project.data.draft)
@@ -45,6 +42,8 @@ const groupedWork = work.reduce<Record<string, (typeof work)[number][]>>(
   },
   {}
 );
+
+const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -157,15 +156,70 @@ const groupedWork = work.reduce<Record<string, (typeof work)[number][]>>(
       </section>
 
       <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">Latest posts</h5>
-          <Link href="/blog"> See all posts </Link>
+        <div class="flex flex-wrap gap-y-3 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">Tool Kit</h5>
+          <Link href="/tools"> See all tools </Link>
         </div>
-        <ul class="flex flex-col gap-4">
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
           {
-            blog.map(post => (
-              <li>
-                <ArrowCard entry={post} />
+            dailyTools.map(tool => (
+              <li class="flex justify-between items-center group p-2 rounded-md hover:bg-black/5 dark:hover:bg-white/5">
+                <Link
+                  href={tool.url}
+                  external
+                  aria-label={tool.title}
+                  className="flex items-center gap-3 no-underline"
+                >
+                  <Image
+                    class="hidden dark:block size-8"
+                    width={32}
+                    height={32}
+                    src={
+                      typeof tool.route !== "string"
+                        ? tool.route.dark
+                        : tool.route
+                    }
+                    alt={tool.title}
+                    title={tool.title}
+                    loading="eager"
+                  />
+                  <Image
+                    width={32}
+                    height={32}
+                    class="block dark:hidden size-8"
+                    src={
+                      typeof tool.route !== "string"
+                        ? tool.route.light
+                        : tool.route
+                    }
+                    alt={tool.title}
+                    title={tool.title}
+                    loading="eager"
+                  />
+                  <div class="flex flex-col">
+                    <span class="font-semibold text-sm text-black dark:text-white">
+                      {tool.title}
+                    </span>
+                    <span class="text-opacity-55 text-[13px]">
+                      {tool.description}
+                    </span>
+                  </div>
+                </Link>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  class="size-3.5 hidden group-hover:block"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
               </li>
             ))
           }
