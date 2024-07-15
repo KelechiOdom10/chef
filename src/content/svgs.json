@@ -434,6 +434,7 @@
     "category": "Software",
     "route": "https://svgl.app/library/raindrop.svg",
     "url": "https://raindrop.io/"
+  },
   {
     "id": 83,
     "title": "Bun",
@@ -441,5 +442,11 @@
     "route": "https://svgl.app/library/bun.svg",
     "url": "https://bun.sh"
   },
+  {
+    "id": 678,
+    "title": "Notes",
+    "category": "Library",
+    "route": "/tools/apple-notes.svg",
+    "url": "https://www.icloud.com/notes"
   }
 ]
