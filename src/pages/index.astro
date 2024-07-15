@@ -156,9 +156,14 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
       </section>
 
       <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-3 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">Tool Kit</h5>
-          <Link href="/tools"> See all tools </Link>
+        <div class="flex flex-col space-y-2">
+          <div class="flex flex-wrap gap-y-3 items-center justify-between">
+            <h5 class="font-semibold text-black dark:text-white">Stack</h5>
+            <Link href="/tools"> See all tools </Link>
+          </div>
+          <p class="text-opacity-60 text-sm">
+            Tools I use daily to get things done.
+          </p>
         </div>
         <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
           {
