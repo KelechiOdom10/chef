@@ -5,14 +5,29 @@ import Container from "@components/Container.astro";
 import { dateRange } from "@lib/utils";
 import { WORK } from "@consts";
 
-const collection = (await getCollection("work"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf());
+const collection = (await getCollection("work")).sort(
+  (a, b) =>
+    new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf()
+);
 
 const work = await Promise.all(
-  collection.map(async (item) => {
+  collection.map(async item => {
     const { Content } = await item.render();
     return { ...item, Content };
   })
+);
+
+// Group work experiences by company
+const groupedWork = work.reduce<Record<string, (typeof work)[number][]>>(
+  (acc, entry) => {
+    const company = entry.data.company;
+    if (!acc[company]) {
+      acc[company] = [];
+    }
+    acc[company].push(entry);
+    return acc;
+  },
+  {}
 );
 ---
 
