@@ -16,7 +16,7 @@ interface ISVG {
   url: string;
 }
 
-const DATA_FILE = join(process.cwd(), "src", "content", "svgs.json");
+const DATA_FILE = join(process.cwd(), "src", "data", "svgs.json");
 
 // ANSI color codes
 const CYAN = "\x1b[36m";

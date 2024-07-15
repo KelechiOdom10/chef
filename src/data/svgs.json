@@ -451,8 +451,7 @@
     "title": "Raindrop.io",
     "category": "Software",
     "route": "https://svgl.app/library/raindrop.svg",
-    "url": "https://raindrop.io/",
-    "daily": true
+    "url": "https://raindrop.io/"
   },
   {
     "id": 83,
@@ -463,10 +462,11 @@
   },
   {
     "id": 678,
-    "title": "Notes",
+    "title": "Apple Notes",
     "category": "Library",
     "route": "/tools/apple-notes.svg",
     "url": "https://www.icloud.com/notes",
+    "description": "Note-taking app",
     "daily": true
   }
 ]
