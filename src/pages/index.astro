@@ -88,13 +88,13 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
           </h5>
           <Link href="/work"> See all work </Link>
         </div>
-        <ul class="flex flex-col space-y-4">
+        <ul class="flex flex-col space-y-6">
           {
             Object.entries(groupedWork).map(([company, entries]) => (
               <li class="animate group">
                 {entries[0].data.website && (
                   <Link
-                    className="flex items-center space-x-2 mb-2 font-semibold text-black dark:text-white no-underline hover:underline"
+                    className="flex items-center space-x-2 font-semibold text-black dark:text-white no-underline hover:underline"
                     href={entries[0].data.website}
                     external
                   >
@@ -116,17 +116,17 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
                   </Link>
                 )}
 
-                <ul class="flex flex-col space-y-4">
+                <ul class="flex flex-col space-y-6 pb-2">
                   {entries.map(entry => (
                     <li>
-                      <div class="flex justify-between items-end mb-1">
+                      <div class="flex justify-between items-end pt-1 pb-1.5 space-y-1">
                         <p class="text-sm font-semibold">{entry.data.role}</p>
                         <p class="text-sm">
                           {dateRange(entry.data.dateStart, entry.data.dateEnd)}
                         </p>
                       </div>
                       {entry.data.description && (
-                        <article>{entry.data.description}</article>
+                        <article class="py-1">{entry.data.description}</article>
                       )}
                     </li>
                   ))}
@@ -165,7 +165,7 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
             Tools I use daily to get things done.
           </p>
         </div>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+        <ul class="grid grid-cols-2 md:grid-cols-2 gap-x-8 gap-y-5">
           {
             dailyTools.map(tool => (
               <li>
@@ -205,7 +205,7 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
                     <span class="font-semibold text-sm text-black dark:text-white">
                       {tool.title}
                     </span>
-                    <span class="text-opacity-55 text-[13px]">
+                    <span class="text-opacity-55 text-[13px] hidden md:block">
                       {tool.description}
                     </span>
                   </div>
