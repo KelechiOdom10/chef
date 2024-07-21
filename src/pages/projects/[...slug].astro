@@ -7,6 +7,7 @@ import { readingTime } from "@lib/utils";
 import BackToPrev from "@components/BackToPrev.astro";
 import Link from "@components/Link.astro";
 import ContactSection from "@components/ContactSection.astro";
+import svgData from "@data/svgs.json";
 
 export async function getStaticPaths() {
   const projects = (await getCollection("projects"))
@@ -21,6 +22,14 @@ type Props = CollectionEntry<"projects">;
 
 const project = Astro.props;
 const { Content } = await project.render();
+
+// Function to find matching SVGs
+function findMatchingSVGs(techStack: string[]) {
+  return svgData.filter(svg =>
+    techStack.some(tech => svg.title.toLowerCase() === tech.toLowerCase())
+  );
+}
+const techStack = findMatchingSVGs(project.data?.technologies || []);
 ---
 
 <PageLayout title={project.data.title} description={project.data.description}>
@@ -62,6 +71,57 @@ const { Content } = await project.render();
     <article class="animate">
       <Content />
     </article>
+    {
+      techStack.length > 0 && (
+        <section class="animate space-y-6 mb-9">
+          <div class="flex flex-wrap gap-y-2 items-center justify-between">
+            <h5 class="font-semibold text-black dark:text-white">Tech Stack</h5>
+          </div>
+          <ul class="flex flex-wrap gap-3">
+            {techStack.map(tech => (
+              <li>
+                <Link
+                  href={tech.url}
+                  external
+                  aria-label={tech.title}
+                  className="flex relative group p-2 items-center gap-2 no-underline rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out w-fit"
+                >
+                  <Image
+                    class="hidden dark:block size-4"
+                    width={32}
+                    height={32}
+                    src={
+                      typeof tech.route !== "string"
+                        ? tech.route.dark
+                        : tech.route
+                    }
+                    alt={tech.title}
+                    title={tech.title}
+                    loading="eager"
+                  />
+                  <Image
+                    width={32}
+                    height={32}
+                    class="block dark:hidden size-4"
+                    src={
+                      typeof tech.route !== "string"
+                        ? tech.route.light
+                        : tech.route
+                    }
+                    alt={tech.title}
+                    title={tech.title}
+                    loading="eager"
+                  />
+                  <span class="font-semibold text-sm text-black dark:text-white">
+                    {tech.title}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
     <ContactSection />
   </Container>
 </PageLayout>
