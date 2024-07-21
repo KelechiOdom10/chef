@@ -4,62 +4,19 @@ description: "On a mission to close the gap of understanding, championing the em
 date: "Aug 9 2023"
 demoURL: "https://www.haaaf.org/"
 thumbnail: "/projects/haaf.png"
+tags: ["Autism", "Empowerment", "Inclusion", "Community"]
+technologies: ["Astro", "UnoCSS", "Typescript", "Paystack"]
 ---
 
-Astro Nano is a static, minimalist, lightweight, lightning fast portfolio and blog theme.
+## The Client
 
-Built with Astro, Tailwind and Typescript, an no frameworks.
+HAAF is a non-profit organization that is on a mission to close the gap of understanding, championing the empowerment and inclusion of individuals within the autism spectrum. The organization provides resources, support, and advocacy for individuals with autism and their families in Nigeria.
 
-It was designed as an even more minimal theme than my popular theme [Astro Sphere](https://github.com/markhorn-dev/astro-sphere)
+## The Work
 
-## 📋 Features
+I worked with the HAAF team to design and develop a responsive web application that provides resources, support, and advocacy for individuals with autism and their families. The platform features a user-friendly interface that makes it easy for individuals to access resources, connect with support groups, and find advocacy services.
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
+### Role
 
-## 🕊️ Lightweight
-
-No frameworks or added bulk
-
-## ⚡︎ Fast
-
-Rendered in ~40ms on localhost
-
-## 📄 Configuration
-
-The blog posts on the demo serve as the documentation and configuration.
-
-## 💻 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
-
-| Command                   | Action                                            |
-| :------------------------ | :------------------------------------------------ |
-| `npm install`             | Installs dependencies                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`       |
-| `npm run dev:network`     | Starts local dev server on local network          |
-| `npm run sync`            | Generates TypeScript types for all Astro modules. |
-| `npm run build`           | Build your production site to `./dist/`           |
-| `npm run preview`         | Preview your build locally, before deploying      |
-| `npm run preview:network` | Preview build on local network                    |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`  |
-| `npm run astro -- --help` | Get help using the Astro CLI                      |
-| `npm run lint`            | Run ESLint                                        |
-| `npm run lint:fix`        | Auto-fix ESLint issues                            |
-
-## 🏛️ License
-
-MIT
+- Fullstack Development
+- UI/UX Design

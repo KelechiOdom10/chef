@@ -4,59 +4,31 @@ description: "Find the right influencers for your brand and create campaigns tha
 date: "May 20 2024"
 demoURL: "https://drzkpnm3w7jc6.cloudfront.net/"
 thumbnail: "/projects/next-edge.png"
+tags: ["Influencer Marketing", "Social Media", "Marketing"]
+technologies:
+  [
+    "React",
+    "Next.js",
+    "GraphQL",
+    "Hygraph",
+    "Tailwind CSS",
+    "SST",
+    "Amazon Web Services",
+  ]
 ---
 
-Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog theme based on my personal website.
+## The Client
 
-It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components.
+Next Edge Talent is an influencer marketing platform that helps brands find the right influencers for their campaigns. The platform provides tools to create, manage, and track influencer marketing campaigns that drive results.
 
-## 📋 Features
+## The Work
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
+I worked with the Next Edge Talent team to design and develop a responsive web application that allows brands to search for influencers, create campaigns, and track campaign performance. The platform features a user-friendly interface that makes it easy for brands to find influencers that align with their target audience and create campaigns that drive results.
 
-## 🕊️ Lightweight
+The eventual goal of the platform is to include a dashboard that provides insights into campaign performance, influencer engagement, and audience demographics. This data helps brands optimize their campaigns and make data-driven decisions to maximize ROI.
 
-All pages under 100kb (including fonts)
+### Role
 
-## ⚡︎ Fast
-
-Rendered in ~40ms on localhost
-
-## 📄 Configuration
-
-The blog posts on the demo serve as the documentation and configuration.
-
-## 💻 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
-
-| Command                   | Action                                            |
-| :------------------------ | :------------------------------------------------ |
-| `npm install`             | Installs dependencies                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`       |
-| `npm run sync`            | Generates TypeScript types for all Astro modules. |
-| `npm run build`           | Build your production site to `./dist/`           |
-| `npm run preview`         | Preview your build locally, before deploying      |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`  |
-| `npm run astro -- --help` | Get help using the Astro CLI                      |
-| `npm run lint`            | Run ESLint                                        |
-| `npm run lint:fix`        | Auto-fix ESLint issues                            |
-
-## 🏛️ License
-
-MIT
+- Fullstack Development
+- UI/UX Design
+- Project Management

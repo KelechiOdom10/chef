@@ -4,62 +4,39 @@ description: "Rent and relist fashion labels and accessories for any occasion."
 date: "Jul 10 2024"
 demoURL: "https://www.relistedlabels.com/"
 thumbnail: "/projects/relisted-labels.png"
+tags: ["Fashion", "Rental", "E-commerce", "Social"]
+technologies:
+  [
+    "Nx",
+    "Next.js",
+    "Tailwind CSS",
+    "T3 Stack",
+    "Lucia Auth",
+    "React Query",
+    "Prisma",
+    "MySQL",
+    "PlanetScale",
+    "Cloudinary",
+    "Pusher",
+    "Vercel",
+    "Resend",
+    "Paystack",
+  ]
 ---
 
-Astro Nano is a static, minimalist, lightweight, lightning fast portfolio and blog theme.
+## The Client
 
-Built with Astro, Tailwind and Typescript, an no frameworks.
+Relisted Labels is a fashion rental platform that allows users to rent and relist fashion labels and accessories for any occasion. The platform provides tools to browse, rent, and relist fashion items that are perfect for special events, photoshoots, or everyday wear in Nigeria.
 
-It was designed as an even more minimal theme than my popular theme [Astro Sphere](https://github.com/markhorn-dev/astro-sphere)
+## The Work
 
-## 📋 Features
+I worked with the Relisted Labels team to design and develop a responsive web application that allows users to browse, rent, and relist fashion items. The platform features a user-friendly interface that makes it easy for users to search for items, view item details, and complete transactions.
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
+The platform also includes a social feature to view each other's listings, and communicate/message with each other. This feature promotes community engagement and encourages users to share their fashion items with others.
 
-## 🕊️ Lightweight
+### Role
 
-No frameworks or added bulk
-
-## ⚡︎ Fast
-
-Rendered in ~40ms on localhost
-
-## 📄 Configuration
-
-The blog posts on the demo serve as the documentation and configuration.
-
-## 💻 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
-
-| Command                   | Action                                            |
-| :------------------------ | :------------------------------------------------ |
-| `npm install`             | Installs dependencies                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`       |
-| `npm run dev:network`     | Starts local dev server on local network          |
-| `npm run sync`            | Generates TypeScript types for all Astro modules. |
-| `npm run build`           | Build your production site to `./dist/`           |
-| `npm run preview`         | Preview your build locally, before deploying      |
-| `npm run preview:network` | Preview build on local network                    |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`  |
-| `npm run astro -- --help` | Get help using the Astro CLI                      |
-| `npm run lint`            | Run ESLint                                        |
-| `npm run lint:fix`        | Auto-fix ESLint issues                            |
-
-## 🏛️ License
-
-MIT
+- Fullstack Development
+- UI/UX Design
+- Project Management
+- Quality Assurance

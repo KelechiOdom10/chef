@@ -5,62 +5,38 @@ date: "Jun 12 2023"
 demoURL: "https://usefusion.ai/"
 repoURL: "https://github.com/NEUROFUSIONInc/fusion"
 thumbnail: "/projects/fusion.png"
+tags: ["Research", "Neuroscience", "Machine Learning", "Web"]
+technologies:
+  [
+    "React Native",
+    "Expo",
+    "Next.js",
+    "React Query",
+    "Tailwind CSS",
+    "Express.js",
+    "SQLite",
+    "MySQL",
+    "Node.js",
+    "Storybook",
+    "Vercel",
+  ]
 ---
 
-Astro Nano is a static, minimalist, lightweight, lightning fast portfolio and blog theme.
+## The Client
 
-Built with Astro, Tailwind and Typescript, an no frameworks.
+Fusion is a research platform that provides tools to conduct brain and behaviour research right from your browser. Fusion offers instant analysis and open data sharing. By integrating AI, it can enhance data processing, uncover complex patterns, and accelerate discoveries in neuroscience and behavioral research, making advanced studies more accessible and efficient.
 
-It was designed as an even more minimal theme than my popular theme [Astro Sphere](https://github.com/markhorn-dev/astro-sphere)
+## The Work
 
-## 📋 Features
+I worked with the Fusion team on a variety of tasks including:
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
+- Leading mobile app development of the core product
+- Establishing coding standards for the repository
+- Spearheading our migration from Create React App to Next.js for the web app
+- Developing design system with Storybook, collaborating closely with designer
+- Implementing authentication and authorization for the platform using next-auth and [nostr](https://nostr.com/)
 
-## 🕊️ Lightweight
+### Role
 
-No frameworks or added bulk
-
-## ⚡︎ Fast
-
-Rendered in ~40ms on localhost
-
-## 📄 Configuration
-
-The blog posts on the demo serve as the documentation and configuration.
-
-## 💻 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
-
-| Command                   | Action                                            |
-| :------------------------ | :------------------------------------------------ |
-| `npm install`             | Installs dependencies                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`       |
-| `npm run dev:network`     | Starts local dev server on local network          |
-| `npm run sync`            | Generates TypeScript types for all Astro modules. |
-| `npm run build`           | Build your production site to `./dist/`           |
-| `npm run preview`         | Preview your build locally, before deploying      |
-| `npm run preview:network` | Preview build on local network                    |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`  |
-| `npm run astro -- --help` | Get help using the Astro CLI                      |
-| `npm run lint`            | Run ESLint                                        |
-| `npm run lint:fix`        | Auto-fix ESLint issues                            |
-
-## 🏛️ License
-
-MIT
+- Fullstack Development
+- UI/UX Design
