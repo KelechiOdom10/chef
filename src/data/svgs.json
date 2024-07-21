@@ -58,6 +58,13 @@
     "url": "https://reactjs.org/"
   },
   {
+    "id": 5678,
+    "title": "React Native",
+    "category": "Library",
+    "route": "https://svgl.app/library/react.svg",
+    "url": "https://reactnative.dev/"
+  },
+  {
     "id": 136,
     "title": "React Query",
     "category": "Framework",
@@ -84,7 +91,10 @@
   {
     "id": 395,
     "title": "Next.js",
-    "category": ["Framework", "Vercel"],
+    "category": [
+      "Framework",
+      "Vercel"
+    ],
     "route": "https://svgl.app/library/nextjs_icon_dark.svg",
     "wordmark": {
       "light": "https://svgl.app/library/nextjs_logo_light.svg",
@@ -172,7 +182,10 @@
   {
     "id": 410,
     "title": "Turso",
-    "category": ["Database", "Software"],
+    "category": [
+      "Database",
+      "Software"
+    ],
     "route": {
       "light": "https://svgl.app/library/turso-light.svg",
       "dark": "https://svgl.app/library/turso-dark.svg"
@@ -196,7 +209,10 @@
   {
     "id": 394,
     "title": "Vercel",
-    "category": ["Hosting", "Vercel"],
+    "category": [
+      "Hosting",
+      "Vercel"
+    ],
     "route": {
       "light": "https://svgl.app/library/vercel.svg",
       "dark": "https://svgl.app/library/vercel_dark.svg"
@@ -394,7 +410,10 @@
   {
     "id": 191,
     "title": "WordPress",
-    "category": ["CMS", "Software"],
+    "category": [
+      "CMS",
+      "Software"
+    ],
     "route": "https://svgl.app/library/wordpress.svg",
     "url": "https://wordpress.org/"
   },
@@ -468,5 +487,64 @@
     "url": "https://www.icloud.com/notes",
     "description": "Note-taking app",
     "daily": true
+  },
+  {
+    "id": 679,
+    "title": "Paystack",
+    "category": "Software",
+    "route": "/tools/paystack.svg",
+    "url": "https://paystack.com/",
+    "description": "Payment gateway"
+  },
+  {
+    "id": 680,
+    "title": "Lucia Auth",
+    "category": "Software",
+    "route": "/tools/lucia.svg",
+    "url": "https://lucia-auth.com/",
+    "description": "Authentication Library"
+  },
+  {
+    "id": 681,
+    "title": "Pusher",
+    "category": "Software",
+    "route": "/tools/pusher.svg",
+    "url": "https://pusher.com/",
+    "description": "Real-time messaging"
+  },
+  {
+    "id": 682,
+    "title": "Nx",
+    "category": "Framework",
+    "route": "/tools/nx.svg",
+    "url": "https://nx.dev/",
+    "description": "Build/Monorepo tool"
+  },
+  {
+    "id": 683,
+    "title": "Hygraph",
+    "category": "Software",
+    "route": "/tools/hygraph.jpeg",
+    "url": "https://hygraph.com/",
+    "description": "GraphQL native CMS"
+  },
+  {
+    "id": 684,
+    "title": "UnoCSS",
+    "category": "Framework",
+    "route": "/tools/unocss.svg",
+    "url": "https://unocss.dev/",
+    "description": "Utility-first CSS framework"
+  },
+  {
+    "id": 401,
+    "title": "Supabase",
+    "category": "Database",
+    "route": "https://svgl.app/library/supabase.svg",
+    "url": "https://supabase.com/",
+    "wordmark": {
+      "light": "https://svgl.app/library/supabase_wordmark_light.svg",
+      "dark": "https://svgl.app/library/supabase_wordmark_dark.svg"
+    }
   }
 ]
