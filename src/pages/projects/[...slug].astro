@@ -33,7 +33,11 @@ function findMatchingSVGs(techStack: string[]) {
 const techStack = findMatchingSVGs(project.data?.technologies || []);
 ---
 
-<PageLayout title={project.data.title} description={project.data.description}>
+<PageLayout
+  title={project.data.title}
+  description={project.data.description}
+  image={project.data.thumbnail}
+>
   <Container>
     <div class="animate">
       <BackToPrev href="/projects"> Back to projects </BackToPrev>
