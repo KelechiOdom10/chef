@@ -52,9 +52,11 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
           {readingTime(project.body)}
         </div>
       </div>
-      <p class="animate text-2xl font-semibold text-black dark:text-white">
+      <h1
+        class="animate text-2xl lg:text-3xl font-semibold text-black dark:text-white"
+      >
         {project.data.title}
-      </p>
+      </h1>
       {
         project.data.description && (
           <p class="animate">{project.data.description}</p>
@@ -107,7 +109,7 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
                   href={tech.url}
                   external
                   aria-label={tech.title}
-                  className="flex relative group p-2 items-center gap-2 no-underline rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out w-fit"
+                  className="flex relative group py-1.5 px-2 items-center gap-2 no-underline rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out w-fit"
                 >
                   <Image
                     class="hidden dark:block size-4"

@@ -91,10 +91,7 @@
   {
     "id": 395,
     "title": "Next.js",
-    "category": [
-      "Framework",
-      "Vercel"
-    ],
+    "category": ["Framework", "Vercel"],
     "route": "https://svgl.app/library/nextjs_icon_dark.svg",
     "wordmark": {
       "light": "https://svgl.app/library/nextjs_logo_light.svg",
@@ -162,8 +159,7 @@
     "category": "Browser",
     "route": "https://svgl.app/library/chrome.svg",
     "url": "https://chrome.com/",
-    "description": "Web browser",
-    "daily": true
+    "description": "Web browser"
   },
   {
     "id": 76,
@@ -182,10 +178,7 @@
   {
     "id": 410,
     "title": "Turso",
-    "category": [
-      "Database",
-      "Software"
-    ],
+    "category": ["Database", "Software"],
     "route": {
       "light": "https://svgl.app/library/turso-light.svg",
       "dark": "https://svgl.app/library/turso-dark.svg"
@@ -209,10 +202,7 @@
   {
     "id": 394,
     "title": "Vercel",
-    "category": [
-      "Hosting",
-      "Vercel"
-    ],
+    "category": ["Hosting", "Vercel"],
     "route": {
       "light": "https://svgl.app/library/vercel.svg",
       "dark": "https://svgl.app/library/vercel_dark.svg"
@@ -410,10 +400,7 @@
   {
     "id": 191,
     "title": "WordPress",
-    "category": [
-      "CMS",
-      "Software"
-    ],
+    "category": ["CMS", "Software"],
     "route": "https://svgl.app/library/wordpress.svg",
     "url": "https://wordpress.org/"
   },
@@ -485,8 +472,7 @@
     "category": "Library",
     "route": "/tools/apple-notes.svg",
     "url": "https://www.icloud.com/notes",
-    "description": "Note-taking app",
-    "daily": true
+    "description": "Note-taking app"
   },
   {
     "id": 679,

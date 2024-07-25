@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import Link from "./Link.astro";
+import svgData from "@data/svgs.json";
+
+interface Props {
+  tool: (typeof svgData)[number];
+}
+
+const { tool } = Astro.props;
+---
+
+<Link
+  href={tool.url}
+  external
+  aria-label={tool.title}
+  className="flex relative group p-2  items-center gap-3 no-underline rounded-md hover:bg-black/5 dark:hover:bg-white/5"
+>
+  <Image
+    class="hidden dark:block size-8"
+    width={32}
+    height={32}
+    src={typeof tool.route !== "string" ? tool.route.dark : tool.route}
+    alt={tool.title}
+    title={tool.title}
+    loading="eager"
+  />
+  <Image
+    width={32}
+    height={32}
+    class="block dark:hidden size-8"
+    src={typeof tool.route !== "string" ? tool.route.light : tool.route}
+    alt={tool.title}
+    title={tool.title}
+    loading="eager"
+  />
+  <div class="flex flex-col">
+    <span class="font-semibold text-sm text-black dark:text-white">
+      {tool.title}
+    </span>
+    <span class="text-opacity-55 text-[13px] hidden md:block">
+      {tool.description}
+    </span>
+  </div>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    class="size-3.5 hidden group-hover:block absolute top-1/2 right-2 -translate-y-1/2 stroke-2 fill-none stroke-current"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+  </svg>
+</Link>
