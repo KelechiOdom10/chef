@@ -1,4 +1,4 @@
-import type { Site, Metadata, Socials } from "@types";
+import type { Site, Metadata } from "@types";
 
 export const SITE: Site = {
   NAME: "Kelechi Odom",
@@ -29,7 +29,7 @@ export const PROJECTS: Metadata = {
     "A collection of my projects, with links to repositories and demos.",
 };
 
-export const SOCIALS: Socials = [
+export const SOCIALS = [
   {
     NAME: "github",
     HREF: "https://github.com/KelechiOdom10",
@@ -38,4 +38,4 @@ export const SOCIALS: Socials = [
     NAME: "linkedin",
     HREF: "https://www.linkedin.com/in/kelechi-odom-065308157/",
   },
-];
+] as const;
