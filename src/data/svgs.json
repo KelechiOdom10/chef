@@ -91,7 +91,10 @@
   {
     "id": 395,
     "title": "Next.js",
-    "category": ["Framework", "Vercel"],
+    "category": [
+      "Framework",
+      "Vercel"
+    ],
     "route": "https://svgl.app/library/nextjs_icon_dark.svg",
     "wordmark": {
       "light": "https://svgl.app/library/nextjs_logo_light.svg",
@@ -178,7 +181,10 @@
   {
     "id": 410,
     "title": "Turso",
-    "category": ["Database", "Software"],
+    "category": [
+      "Database",
+      "Software"
+    ],
     "route": {
       "light": "https://svgl.app/library/turso-light.svg",
       "dark": "https://svgl.app/library/turso-dark.svg"
@@ -202,7 +208,10 @@
   {
     "id": 394,
     "title": "Vercel",
-    "category": ["Hosting", "Vercel"],
+    "category": [
+      "Hosting",
+      "Vercel"
+    ],
     "route": {
       "light": "https://svgl.app/library/vercel.svg",
       "dark": "https://svgl.app/library/vercel_dark.svg"
@@ -400,7 +409,10 @@
   {
     "id": 191,
     "title": "WordPress",
-    "category": ["CMS", "Software"],
+    "category": [
+      "CMS",
+      "Software"
+    ],
     "route": "https://svgl.app/library/wordpress.svg",
     "url": "https://wordpress.org/"
   },
@@ -532,5 +544,22 @@
       "light": "https://svgl.app/library/supabase_wordmark_light.svg",
       "dark": "https://svgl.app/library/supabase_wordmark_dark.svg"
     }
+  },
+  {
+    "id": 15,
+    "title": "Github",
+    "category": "Software",
+    "route": {
+      "light": "https://svgl.app/library/github-light.svg",
+      "dark": "https://svgl.app/library/github-dark.svg"
+    },
+    "url": "https://github.com/"
+  },
+  {
+    "id": 61,
+    "title": "LinkedIn",
+    "category": "Social",
+    "route": "https://svgl.app/library/linkedin.svg",
+    "url": "https://www.linkedin.com/"
   }
 ]
