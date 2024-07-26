@@ -1,6 +1,12 @@
 ---
 import { SITE, SOCIALS } from "@consts";
 import Link from "./Link.astro";
+import { Image } from "astro:assets";
+
+const contractIcons: Record<(typeof SOCIALS)[number]["NAME"], string> = {
+  github: "/tools/github.svg",
+  linkedin: "/tools/linkedin.svg",
+};
 ---
 
 <section class="animate space-y-4">
@@ -13,22 +19,57 @@ import Link from "./Link.astro";
   </article>
   <ul class="flex flex-wrap gap-2">
     {
-      SOCIALS.map(SOCIAL => (
-        <li class="flex gap-x-2 text-nowrap">
-          <Link
-            href={SOCIAL.HREF}
-            external
-            aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
-          >
-            {SOCIAL.NAME}
-          </Link>
-          {"/"}
-        </li>
-      ))
+      SOCIALS.map(SOCIAL => {
+        const imageRoute = contractIcons[SOCIAL.NAME];
+
+        return (
+          <li class="flex gap-x-2 text-nowrap">
+            <Link
+              href={SOCIAL.HREF}
+              external
+              aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+              className="flex items-center space-x-2"
+            >
+              {imageRoute && (
+                <Image
+                  width={20}
+                  height={20}
+                  class="block size-3.5"
+                  src={imageRoute}
+                  alt={SOCIAL.NAME}
+                  title={SOCIAL.NAME}
+                  loading="eager"
+                />
+              )}
+              <span>{SOCIAL.NAME}</span>
+            </Link>
+            {"/"}
+          </li>
+        );
+      })
     }
     <li class="line-clamp-1">
-      <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
-        email
+      <Link
+        href={`mailto:${SITE.EMAIL}`}
+        aria-label={`Email ${SITE.NAME}`}
+        className="flex items-center space-x-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-3.5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+          ></path>
+        </svg>
+
+        <span>email</span>
       </Link>
     </li>
   </ul>
