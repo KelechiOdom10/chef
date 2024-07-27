@@ -5,45 +5,17 @@ import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
-import { dateRange } from "@lib/utils";
 import { SITE, HOME } from "@consts";
 
 import tools from "@data/svgs.json";
 import ContactSection from "@components/ContactSection.astro";
 import StackCard from "@components/StackCard.astro";
+import WorkSection from "@components/WorkSection.astro";
 
 const projects = (await getCollection("projects"))
   .filter(project => !project.data.draft)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
-
-const allwork = (await getCollection("work"))
-  .sort(
-    (a, b) =>
-      new Date(b.data.dateStart).valueOf() -
-      new Date(a.data.dateStart).valueOf()
-  )
-  .slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
-
-const work = await Promise.all(
-  allwork.map(async item => {
-    const { Content } = await item.render();
-    return { ...item, Content };
-  })
-);
-
-// Group work experiences by company
-const groupedWork = work.reduce<Record<string, (typeof work)[number][]>>(
-  (acc, entry) => {
-    const company = entry.data.company;
-    if (!acc[company]) {
-      acc[company] = [];
-    }
-    acc[company].push(entry);
-    return acc;
-  },
-  {}
-);
 
 const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
 ---
@@ -89,51 +61,10 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
           </h5>
           <Link href="/work" className="text-[15px]"> See all work </Link>
         </div>
-        <ul class="flex flex-col space-y-6">
-          {
-            Object.entries(groupedWork).map(([company, entries]) => (
-              <li class="animate group">
-                {entries[0].data.website && (
-                  <Link
-                    className="flex items-center space-x-2 font-semibold text-black text-[15px] dark:text-white no-underline hover:underline font-serif"
-                    href={entries[0].data.website}
-                    external
-                  >
-                    <span>{company}</span>
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 12 12"
-                      fill="currentColor"
-                      class="stroke-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M3.5 3C3.22386 3 3 3.22386 3 3.5C3 3.77614 3.22386 4 3.5 4V3ZM8.5 3.5H9C9 3.22386 8.77614 3 8.5 3V3.5ZM8 8.5C8 8.77614 8.22386 9 8.5 9C8.77614 9 9 8.77614 9 8.5H8ZM2.64645 8.64645C2.45118 8.84171 2.45118 9.15829 2.64645 9.35355C2.84171 9.54882 3.15829 9.54882 3.35355 9.35355L2.64645 8.64645ZM3.5 4H8.5V3H3.5V4ZM8 3.5V8.5H9V3.5H8ZM8.14645 3.14645L2.64645 8.64645L3.35355 9.35355L8.85355 3.85355L8.14645 3.14645Z" />
-                    </svg>
-
-                    <span class="sr-only">Visit {company}</span>
-                  </Link>
-                )}
-
-                <ul class="flex flex-col space-y-6 pb-2">
-                  {entries.map(entry => (
-                    <li>
-                      <div class="flex justify-between items-end pt-1 pb-1.5 space-y-1">
-                        <p class="text-sm scale-105">{entry.data.role}</p>
-                        <p class="text-sm">
-                          {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-                        </p>
-                      </div>
-                      {entry.data.description && (
-                        <article class="py-1">{entry.data.description}</article>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))
-          }
-        </ul>
+        <WorkSection
+          numWorksToShow={SITE.NUM_WORKS_ON_HOMEPAGE}
+          contenttType="description"
+        />
       </section>
 
       <section class="animate space-y-6">
