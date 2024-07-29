@@ -11,5 +11,10 @@ export default defineConfig({
   output: "hybrid",
   site: "https://kellycooks.dev/",
   integrations: [mdx(), sitemap(), tailwind(), solidJs()],
-  adapter: cloudflare()
+  adapter: cloudflare(),
+  vite: {
+    define: {
+      "process.env": process.env,
+    },
+  },
 });
