@@ -4,8 +4,12 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import solidJs from "@astrojs/solid-js";
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-nano-demo.vercel.app",
-  integrations: [mdx(), sitemap(), tailwind(), solidJs()]
+  output: "hybrid",
+  site: "https://kellycooks.dev/",
+  integrations: [mdx(), sitemap(), tailwind(), solidJs()],
+  adapter: cloudflare()
 });
