@@ -11,6 +11,7 @@ import tools from "@data/svgs.json";
 import ContactSection from "@components/ContactSection.astro";
 import StackCard from "@components/StackCard.astro";
 import WorkSection from "@components/WorkSection.astro";
+import { SpotifyNowPlaying } from "@components/NowPlaying";
 
 const projects = (await getCollection("projects"))
   .filter(project => !project.data.draft)
@@ -40,7 +41,7 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
     </div>
     <div class="space-y-16">
       <section>
-        <article class="space-y-4">
+        <article class="space-y-4 mb-4">
           <p class="animate">
             I am a fullstack software engineer from 🇳🇬 Nigeria, currently based
             in 🇬🇧 London. With a passion for engineering, product and
@@ -52,6 +53,8 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
             startups, football, gaming, music and anime
           </p>
         </article>
+
+        <SpotifyNowPlaying client:only="solid-js" />
       </section>
 
       <section class="animate space-y-6">
