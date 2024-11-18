@@ -2,7 +2,7 @@
 title: "Relisted Labels"
 description: "Rent and relist fashion labels and accessories for any occasion."
 date: "Jul 10 2024"
-demoURL: "https://www.relistedlabels.com/"
+demoURL: "https://relisted-labels.vercel.app/"
 thumbnail: "/projects/relisted-labels.png"
 tags: ["Fashion", "Rental", "E-commerce", "Social"]
 technologies:
