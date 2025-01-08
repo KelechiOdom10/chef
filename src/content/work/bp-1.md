@@ -2,7 +2,7 @@
 company: "bp"
 role: "Business Analyst"
 dateStart: "09/06/2019"
-dateEnd: "09/02/2020"
+dateEnd: "01/02/2020"
 website: "https://www.bp.com/"
 description: "I designed and built a trading platform that cut out daily paperwork and made helpful data dashboards. This made work smoother for several teams and saved a lot of time on routine tasks."
 logo: { light: "/work/bp-light.png", dark: "/work/bp-dark.webp" }
