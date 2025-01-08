@@ -43,6 +43,7 @@ export const SpotifyNowPlaying = () => {
             src={spotifyData()?.albumImageUrl as string}
             width={64}
             height={64}
+            loading="eager"
             alt={`${spotifyData()?.title} album cover`}
             class="size-12 rounded-md"
           />
