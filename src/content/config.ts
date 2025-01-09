@@ -31,17 +31,18 @@ const work = defineCollection({
 
 const projects = defineCollection({
   type: "content",
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    date: z.coerce.date(),
-    draft: z.boolean().optional(),
-    demoURL: z.string().optional(),
-    repoURL: z.string().optional(),
-    thumbnail: z.string().optional(),
-    tags: z.array(z.string()).optional(),
-    technologies: z.array(z.string()).optional(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      date: z.coerce.date(),
+      draft: z.boolean().optional(),
+      demoURL: z.string().optional(),
+      repoURL: z.string().optional(),
+      thumbnail: image().optional(),
+      tags: z.array(z.string()).optional(),
+      technologies: z.array(z.string()).optional(),
+    }),
 });
 
 export const collections = { blog, work, projects };
