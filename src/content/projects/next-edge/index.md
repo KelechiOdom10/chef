@@ -3,7 +3,7 @@ title: "Next Edge Talent"
 description: "Find the right influencers for your brand and create campaigns that drive results."
 date: "May 20 2024"
 demoURL: "https://drzkpnm3w7jc6.cloudfront.net/"
-thumbnail: "/projects/next-edge.png"
+thumbnail: "./next-edge.png"
 tags: ["Influencer Marketing", "Social Media", "Marketing"]
 technologies:
   [

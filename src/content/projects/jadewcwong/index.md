@@ -3,7 +3,7 @@ title: "JW"
 description: "A tailor-made personal portfolio for a graphic designer"
 date: "Dec 12 2024"
 demoURL: "https://jadewcwong.com/"
-thumbnail: "/projects/jadewcwong.png"
+thumbnail: "./jadewcwong.png"
 tags: ["Graphic Design", "Portfolio"]
 technologies: ["Astro", "Tailwind CSS", "Typescript", "Sanity"]
 ---

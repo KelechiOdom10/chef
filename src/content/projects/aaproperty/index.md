@@ -4,7 +4,7 @@ description: "Leading real estate company serving Central and North-west London"
 date: "Oct 26 2021"
 demoURL: "https://aaproperty.vercel.app/"
 repoURL: "https://github.com/KelechiOdom10/aaproperty"
-thumbnail: "/projects/aaproperty.png"
+thumbnail: "./aaproperty.png"
 tags: ["Real Estate", "Property Management", "Web"]
 technologies:
   ["React", "Chakra UI", "Next.js", "Typescript", "Vercel", "Supabase"]

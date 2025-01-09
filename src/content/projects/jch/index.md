@@ -3,7 +3,7 @@ title: "Jones Creek Hydrocarbon"
 description: "Solving production optimization challenges in the Sub Saharan Africa energy ecosystem."
 date: "Jan 08 2022"
 demoURL: "https://jonescreekhydrocarbon.com/"
-thumbnail: "/projects/jch.png"
+thumbnail: "./jch.png"
 tags: ["Energy", "Production Optimization", "Data Analytics", "Web"]
 technologies: ["WordPress", "Elementor"]
 ---

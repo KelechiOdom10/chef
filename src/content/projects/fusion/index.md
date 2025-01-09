@@ -4,7 +4,7 @@ description: "The simplest way to do brain and behaviour research right from you
 date: "Jun 12 2023"
 demoURL: "https://usefusion.ai/"
 repoURL: "https://github.com/NEUROFUSIONInc/fusion"
-thumbnail: "/projects/fusion.png"
+thumbnail: "./fusion.png"
 tags: ["Research", "Neuroscience", "Machine Learning", "Web"]
 technologies:
   [
