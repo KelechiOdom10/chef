@@ -1,7 +1,7 @@
 ---
 title: "Fusion"
 description: "The simplest way to do brain and behaviour research right from your browser."
-date: "Jun 12 2023"
+date: "Jun 12 2024"
 demoURL: "https://usefusion.ai/"
 repoURL: "https://github.com/NEUROFUSIONInc/fusion"
 thumbnail: "./fusion.png"
