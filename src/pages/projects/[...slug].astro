@@ -36,7 +36,7 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
 <PageLayout
   title={project.data.title}
   description={project.data.description}
-  image={project.data.thumbnail}
+  image={project.data.thumbnail?.src}
 >
   <Container>
     <div class="animate">
