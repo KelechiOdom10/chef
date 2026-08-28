@@ -7,11 +7,18 @@ const SPOTIFY_API_ENDPOINT = `${
 export async function getNowPlaying() {
   try {
     const response = await fetch(SPOTIFY_API_ENDPOINT);
+    if (!response.ok) {
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+
     const data = (await response.json()) as
       | CurrentlyPlaying
       | RecentlyPlayed["items"][0];
 
     if ("is_playing" in data) {
+      if (!data.item) {
+        return null;
+      }
       return {
         isPlaying: data.is_playing,
         title: data.item.name,
@@ -20,6 +27,10 @@ export async function getNowPlaying() {
         songUrl: data.item.external_urls.spotify,
         hasPreview: data.item.preview_url !== null,
       };
+    }
+
+    if (!data.track) {
+      return null;
     }
 
     return {

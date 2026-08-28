@@ -11,6 +11,7 @@
     "astro": "astro",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "spotify:oauth": "bun run src/scripts/spotify-oauth.ts",
     "svg-cli": "bun run src/scripts/svg-cli.ts"
   },
   "dependencies": {
