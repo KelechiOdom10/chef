@@ -26,7 +26,7 @@ export const WORK: Metadata = {
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
   DESCRIPTION:
-    "Personal projects and client work by Kelechi Odom.",
+    "Personal projects, client work, and collaborations by Kelechi Odom.",
 };
 
 export const SOCIALS = [
