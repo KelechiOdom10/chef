@@ -5,12 +5,12 @@ export const SITE: Site = {
   EMAIL: "kelechiodom10@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 3,
-  NUM_PROJECTS_ON_HOMEPAGE: 4,
 };
 
 export const HOME: Metadata = {
   TITLE: "Home",
-  DESCRIPTION: "Developer, footballer, and anime enthusiast.",
+  DESCRIPTION:
+    "Kelechi Odom is a senior full-stack product engineer in London who ships AI features for customers.",
 };
 
 export const BLOG: Metadata = {
@@ -26,7 +26,7 @@ export const WORK: Metadata = {
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
   DESCRIPTION:
-    "A collection of my projects, with links to repositories and demos.",
+    "Personal projects and client work by Kelechi Odom.",
 };
 
 export const SOCIALS = [

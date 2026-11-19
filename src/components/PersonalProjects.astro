@@ -1,0 +1,31 @@
+---
+import ArrowCard from "./ArrowCard.astro";
+
+const projects = [
+  {
+    title: "Dictate",
+    href: "https://dictate.kellycooks.dev/",
+    description: "Annotate a screen, dictate feedback, and copy it into an AI agent.",
+  },
+  {
+    title: "RivalsHub",
+    href: "https://rivalshub.kellycooks.dev/",
+    description: "Follow competitive Marvel Rivals and explore players, maps and characters.",
+  },
+  {
+    title: "AniHub",
+    href: "https://anihub.kellycooks.dev/",
+    description: "Discover anime with friends.",
+  },
+];
+---
+
+<ul class="flex flex-col gap-4">
+  {
+    projects.map(project => (
+      <li>
+        <ArrowCard {...project} />
+      </li>
+    ))
+  }
+</ul>

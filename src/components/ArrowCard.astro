@@ -1,23 +1,28 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
-type Props = {
-  entry: CollectionEntry<"blog"> | CollectionEntry<"projects">;
-};
+type Props =
+  | { entry: CollectionEntry<"blog"> | CollectionEntry<"projects"> }
+  | { href: string; title: string; description: string };
 
-const { entry } = Astro.props;
+const { href, title, description } = "entry" in Astro.props
+  ? {
+      href: `/${Astro.props.entry.collection}/${Astro.props.entry.slug}`,
+      ...Astro.props.entry.data,
+    }
+  : Astro.props;
 ---
 
 <a
-  href={`/${entry.collection}/${entry.slug}`}
+  href={href}
   class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
 >
   <div class="flex flex-col flex-1 truncate">
     <h6 class="font-semibold">
-      {entry.data.title}
+      {title}
     </h6>
-    <div class="text-sm truncate">
-      {entry.data.description}
+    <div class:list={["text-sm", "entry" in Astro.props ? "truncate" : "whitespace-normal"]}>
+      {description}
     </div>
   </div>
   <svg
