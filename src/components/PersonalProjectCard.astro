@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  image: string;
+}
+
+const { title, description, href, image } = Astro.props;
+---
+
+<a
+  href={href}
+  data-project-link
+  class="group relative isolate flex h-full flex-col rounded-xl border border-black/10 bg-white/50 transition-colors hover:border-black/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-500 dark:border-white/15 dark:bg-white/[0.035] dark:hover:border-white/35 dark:focus-visible:outline-stone-300"
+>
+  <div class="aspect-[8/5] overflow-hidden rounded-t-[11px] border-b border-black/10 bg-stone-200 dark:border-white/10 dark:bg-stone-800">
+    <Image
+      src={image}
+      alt=""
+      width={768}
+      height={480}
+      class="h-full w-full object-cover motion-safe:transition-transform motion-safe:duration-300 motion-safe:group-hover:scale-105"
+    />
+  </div>
+  <div class="flex flex-1 flex-col gap-1.5 px-3.5 pb-4 pt-3">
+    <div class="flex items-start justify-between gap-2">
+      <span class="font-semibold text-black dark:text-white">{title}</span>
+      <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" class="mt-1 shrink-0" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 11.5l7-7m-6 0h6v6" />
+      </svg>
+    </div>
+    <p class="text-sm leading-relaxed">{description}</p>
+  </div>
+  <span class="project-view" aria-hidden="true">View</span>
+</a>
+
+<style>
+  .project-view {
+    display: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    [data-view-active]:not(:focus-visible) {
+      cursor: none;
+      z-index: 1;
+    }
+
+    .project-view {
+      position: absolute;
+      top: -1.75rem;
+      left: -1.75rem;
+      display: grid;
+      width: 3.5rem;
+      aspect-ratio: 1;
+      place-items: center;
+      border-radius: 50%;
+      background: #fbf5ea;
+      color: #25201c;
+      box-shadow: 0 3px 16px #1c191740;
+      font-size: 0.75rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 140ms ease-out, scale 140ms ease-out;
+      translate: var(--view-x, 0px) var(--view-y, 0px);
+      scale: 0.8;
+    }
+
+    [data-view-active]:not(:focus-visible) .project-view {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+</style>
+
+<script>
+  for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-project-link]")) {
+    link.addEventListener("pointermove", event => {
+      if (event.pointerType !== "mouse") return;
+      const bounds = link.getBoundingClientRect();
+      link.style.setProperty("--view-x", `${event.clientX - bounds.left - link.clientLeft}px`);
+      link.style.setProperty("--view-y", `${event.clientY - bounds.top - link.clientTop}px`);
+      link.setAttribute("data-view-active", "");
+    });
+
+    for (const eventName of ["pointerleave", "pointercancel"]) {
+      link.addEventListener(eventName, () => link.removeAttribute("data-view-active"));
+    }
+  }
+</script>

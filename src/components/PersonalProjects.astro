@@ -1,30 +1,33 @@
 ---
-import ArrowCard from "./ArrowCard.astro";
+import PersonalProjectCard from "./PersonalProjectCard.astro";
 
 const projects = [
   {
     title: "Dictate",
     href: "https://dictate.kellycooks.dev/",
+    image: "/projects/dictate.webp",
     description: "Annotate your screen, dictate feedback, and paste it into a coding agent.",
   },
   {
     title: "RivalsHub",
     href: "https://rivalshub.kellycooks.dev/",
+    image: "/projects/rivalshub.webp",
     description: "Follow competitive Marvel Rivals and explore players, maps and characters.",
   },
   {
     title: "AniHub",
     href: "https://anihub.kellycooks.dev/",
+    image: "/projects/anihub.webp",
     description: "Discover anime with friends.",
   },
 ];
 ---
 
-<ul class="flex flex-col gap-4">
+<ul class="grid grid-cols-1 gap-3 sm:grid-cols-3">
   {
     projects.map(project => (
       <li>
-        <ArrowCard {...project} />
+        <PersonalProjectCard {...project} />
       </li>
     ))
   }

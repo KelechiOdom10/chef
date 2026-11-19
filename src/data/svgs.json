@@ -29,11 +29,11 @@
   },
   {
     "id": 280,
-    "title": "Warp",
+    "title": "Capy",
     "category": "Software",
-    "route": "https://svgl.app/library/warp.svg",
-    "url": "https://www.warp.dev/",
-    "description": "AI-powered terminal",
+    "route": "/tools/capy.svg",
+    "url": "https://capy.ai/",
+    "description": "AI coding assistant",
     "daily": true
   },
   {
@@ -131,9 +131,9 @@
     "id": 342,
     "title": "Claude AI",
     "category": "AI",
-    "route": "https://svgl.app/library/claude-ai.svg",
-    "url": "https://claude.ai/",
-    "description": "Enough said",
+    "route": "/tools/claude.svg",
+    "url": "https://claude.com/",
+    "description": "AI assistant",
     "daily": true
   },
   {
