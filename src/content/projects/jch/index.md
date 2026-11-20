@@ -1,6 +1,6 @@
 ---
 title: "Jones Creek Hydrocarbon"
-description: "Solving production optimization challenges in the Sub Saharan Africa energy ecosystem."
+description: "A services and project site for a Nigerian energy company."
 date: "Jan 08 2022"
 demoURL: "https://jonescreekhydrocarbon.com/"
 thumbnail: "./jch.png"
@@ -8,15 +8,15 @@ tags: ["Energy", "Production Optimization", "Data Analytics", "Web"]
 technologies: ["WordPress", "Elementor"]
 ---
 
-## The Client
+## The client
 
-Jones Creek Hydrocarbon Limited is a production optimization company that provides solutions to production optimization challenges in the Sub Saharan Africa energy ecosystem. JCHL is focused on maximizing the use of Nigerian specialized skills and human resources, materials, equipment, and services in a sustainable manner as well as developing innovative solutions in the oil and gas treatment and processing industry.
+Jones Creek Hydrocarbon provides services for oil and gas production and processing in sub-Saharan Africa.
 
-## The Work
+## What I built
 
-I worked with the JCHL team to design and develop a responsive website that showcases the company's services, projects, and team. The website features a user-friendly interface that makes it easy for visitors to learn more about the company, view project details, and contact the team.
+I built the WordPress site with the Jones Creek team. It gives prospective clients one place to find their services, see past projects and get in touch.
 
 ### Role
 
-- WordPress Development
-- Project Management
+- WordPress development
+- Project management

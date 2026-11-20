@@ -20,13 +20,13 @@ export const BLOG: Metadata = {
 
 export const WORK: Metadata = {
   TITLE: "Work",
-  DESCRIPTION: "Where I have worked and what I have done.",
+  DESCRIPTION: "What I built at Humaans, Unlikely AI, Robin AI, bp, and Cellulant.",
 };
 
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
   DESCRIPTION:
-    "Personal projects, client work, and collaborations by Kelechi Odom.",
+    "Personal projects and selected client work by Kelechi Odom.",
 };
 
 export const SOCIALS = [

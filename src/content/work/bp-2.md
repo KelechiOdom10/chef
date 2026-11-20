@@ -1,11 +1,10 @@
 ---
 company: "bp"
 role: "Software Engineer"
-dateStart: "01/03/2020"
-dateEnd: "01/01/2023"
+dateStart: "2020-03-01"
+dateEnd: "2023-01-01"
 website: "https://www.bp.com/"
-description: "At bp, I wore many hats as a full-stack developer. From building payment systems for European fleet managers to leading UI development for our global supplier portal. My work touched everything from app security to DevOps integration."
 logo: { light: "/work/bp-mark.webp", dark: "/work/bp-mark.webp" }
 ---
 
-At bp, I wore many hats as a full-stack developer. From building payment systems for European fleet managers to leading UI development for our global supplier portal, I tackled diverse challenges. I modernized legacy code and even built custom apps using integrating cloud services. My favorite part? Juggling everything from mobile app security to DevOps integration. Throughout these projects, I utilized a diverse tech stack including Node.js, Express, GraphQL, React Native, .NET, and various cloud platforms.
+I led the React migration of bp's global supplier portal to improve page load times. I also built two-factor authentication for a fleet payments app so users had a second check when signing in.

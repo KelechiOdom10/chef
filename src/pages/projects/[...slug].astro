@@ -24,13 +24,21 @@ type Props = CollectionEntry<"projects">;
 const project = Astro.props;
 const { Content } = await project.render();
 
-// Function to find matching SVGs
-function findMatchingSVGs(techStack: string[]) {
-  return svgData.filter(svg =>
-    techStack.some(tech => svg.title.toLowerCase() === tech.toLowerCase())
-  );
-}
-const techStack = findMatchingSVGs(project.data?.technologies || []);
+const techStack = (project.data.technologies ?? []).map(label => {
+  const tech = svgData.find(item => item.title.toLowerCase() === label.toLowerCase());
+  const route = tech?.route;
+  const sources = typeof route === "string"
+    ? [{ src: route, theme: "" }]
+    : route
+      ? [{ src: route.light, theme: "block dark:hidden" }, { src: route.dark, theme: "hidden dark:block" }]
+      : [];
+
+  return {
+    title: tech?.title ?? label,
+    url: tech?.url,
+    icons: sources.filter(icon => icon.src.startsWith("/tools/")),
+  };
+});
 ---
 
 <PageLayout
@@ -85,13 +93,13 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
           <nav class="animate flex gap-1 font-semibold dark:text-white/90">
             {project.data.demoURL && (
               <Link href={project.data.demoURL} external>
-                demo
+                demo<span class="sr-only"> (opens in a new tab)</span>
               </Link>
             )}
             {project.data.demoURL && project.data.repoURL && <span>/</span>}
             {project.data.repoURL && (
               <Link href={project.data.repoURL} external>
-                repo
+                repo<span class="sr-only"> (opens in a new tab)</span>
               </Link>
             )}
           </nav>
@@ -103,51 +111,40 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
     </article>
     {
       techStack.length > 0 && (
-        <section class="animate space-y-6 mb-9">
+        <section class="animate space-y-6 mb-9" data-project-tech>
           <div class="flex flex-wrap gap-y-2 items-center justify-between">
             <h5 class="font-semibold text-black dark:text-white">Tech Stack</h5>
           </div>
           <ul class="flex flex-wrap gap-3">
-            {techStack.map(tech => (
-              <li>
-                <Link
-                  href={tech.url}
-                  external
-                  aria-label={tech.title}
-                  className="flex relative group py-1.5 px-2 items-center gap-2 no-underline rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out w-fit"
-                >
-                  <Image
-                    class="hidden dark:block size-4"
-                    width={32}
-                    height={32}
-                    src={
-                      typeof tech.route !== "string"
-                        ? tech.route.dark
-                        : tech.route
-                    }
-                    alt={tech.title}
-                    title={tech.title}
-                    loading="eager"
-                  />
-                  <Image
-                    width={32}
-                    height={32}
-                    class="block dark:hidden size-4"
-                    src={
-                      typeof tech.route !== "string"
-                        ? tech.route.light
-                        : tech.route
-                    }
-                    alt={tech.title}
-                    title={tech.title}
-                    loading="eager"
-                  />
-                  <span class="font-semibold text-sm text-black dark:text-white">
-                    {tech.title}
-                  </span>
-                </Link>
-              </li>
-            ))}
+            {techStack.map(tech => {
+              const Tag = tech.url ? "a" : "span";
+              return (
+                <li>
+                  <Tag
+                    href={tech.url}
+                    target={tech.url ? "_blank" : undefined}
+                    rel={tech.url ? "noopener" : undefined}
+                    class:list={[
+                      "flex relative group py-1.5 px-2 items-center gap-2 no-underline rounded-lg border border-black/15 dark:border-white/20 w-fit",
+                      tech.url && "hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out",
+                    ]}
+                  >
+                    {tech.icons.map(icon => (
+                      <img
+                        class:list={["size-4 object-contain", icon.theme]}
+                        width={16}
+                        height={16}
+                        src={icon.src}
+                        alt=""
+                      />
+                    ))}
+                    <span class="font-semibold text-sm text-black dark:text-white">
+                      {tech.title}
+                    </span>
+                  </Tag>
+                </li>
+              );
+            })}
           </ul>
         </section>
       )
