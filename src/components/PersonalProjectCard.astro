@@ -13,6 +13,8 @@ const { title, description, href, image } = Astro.props;
 
 <a
   href={href}
+  target="_blank"
+  rel="noopener"
   data-project-link
   class="group relative isolate flex h-full flex-col rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-500 dark:focus-visible:outline-stone-300"
 >
@@ -34,4 +36,5 @@ const { title, description, href, image } = Astro.props;
     </div>
     <p class="line-clamp-2 text-sm leading-relaxed">{description}</p>
   </div>
+  <span class="sr-only">(opens in a new tab)</span>
 </a>
