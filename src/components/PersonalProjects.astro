@@ -23,12 +23,82 @@ const projects = [
 ];
 ---
 
-<ul class="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-3">
-  {
-    projects.map(project => (
-      <li>
-        <PersonalProjectCard {...project} />
-      </li>
-    ))
+<div class="relative" data-project-gallery>
+  <ul class="grid grid-cols-1 gap-x-4 gap-y-6 sm:grid-cols-3">
+    {
+      projects.map(project => (
+        <li>
+          <PersonalProjectCard {...project} />
+        </li>
+      ))
+    }
+  </ul>
+  <span class="project-view" aria-hidden="true">View</span>
+</div>
+
+<style>
+  .project-view {
+    display: none;
   }
-</ul>
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    [data-view-visible] :global([data-project-link]:hover:not(:focus-visible)) {
+      cursor: none;
+    }
+
+    .project-view {
+      position: absolute;
+      z-index: 10;
+      top: -1.75rem;
+      left: -1.75rem;
+      display: grid;
+      width: 3.5rem;
+      aspect-ratio: 1;
+      place-items: center;
+      border-radius: 50%;
+      background: #fbf5ea;
+      color: #25201c;
+      box-shadow: 0 3px 16px #1c191740;
+      font-size: 0.75rem;
+      font-weight: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 220ms ease;
+      translate: var(--view-x, 0px) var(--view-y, 0px);
+    }
+
+    [data-view-visible] .project-view {
+      opacity: 1;
+    }
+  }
+</style>
+
+<script>
+  let gallery: HTMLElement | null = null;
+
+  function clearView() {
+    gallery?.removeAttribute("data-view-visible");
+    gallery = null;
+  }
+
+  document.addEventListener("pointermove", event => {
+    if (event.pointerType !== "mouse" || !(event.target instanceof Element)) return;
+    const next = event.target.closest<HTMLElement>("[data-project-gallery]");
+    if (next !== gallery) clearView();
+    if (!next) return;
+
+    const bounds = next.getBoundingClientRect();
+    next.style.setProperty("--view-x", `${event.clientX - bounds.left}px`);
+    next.style.setProperty("--view-y", `${event.clientY - bounds.top}px`);
+    next.toggleAttribute("data-view-visible", Boolean(event.target.closest("[data-project-link]:not(:focus-visible)")));
+    gallery = next;
+  });
+
+  document.addEventListener("pointerout", event => {
+    if (!(event.relatedTarget instanceof Node) || !gallery?.contains(event.relatedTarget)) {
+      clearView();
+    }
+  });
+  document.addEventListener("pointercancel", clearView);
+  document.addEventListener("astro:before-swap", clearView);
+</script>

@@ -61,8 +61,9 @@ const groupedWork: GroupedWork = work.reduce((acc, entry) => {
               {logo && (
                 <span
                   aria-hidden="true"
-                  class="company-logo size-[1em] shrink-0 bg-contain bg-center bg-no-repeat"
+                  class="company-logo h-[1em] shrink-0 bg-contain bg-center bg-no-repeat"
                   style={{
+                    width: `${logo.aspectRatio ?? 1}em`,
                     "--logo-light": `url("${logo.light}")`,
                     "--logo-dark": `url("${logo.dark}")`,
                   }}

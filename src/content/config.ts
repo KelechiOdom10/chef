@@ -24,6 +24,7 @@ const work = defineCollection({
       .object({
         light: z.string(),
         dark: z.string(),
+        aspectRatio: z.number().positive().optional(),
       })
       .optional(),
   }),
