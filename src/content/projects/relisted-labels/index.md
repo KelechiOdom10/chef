@@ -1,6 +1,6 @@
 ---
 title: "Relisted Labels"
-description: "Rent and relist fashion labels and accessories for any occasion."
+description: "A marketplace for renting and listing clothes and accessories."
 date: "Jul 10 2024"
 demoURL: "https://relisted-labels.vercel.app/"
 thumbnail: "./relisted-labels.png"
@@ -24,19 +24,17 @@ technologies:
   ]
 ---
 
-## The Client
+## The client
 
-Relisted Labels is a fashion rental platform that allows users to rent and relist fashion labels and accessories for any occasion. The platform provides tools to browse, rent, and relist fashion items that are perfect for special events, photoshoots, or everyday wear in Nigeria.
+Relisted Labels is a fashion rental marketplace in Nigeria. People can borrow clothes for an event, a photoshoot or everyday wear, or list pieces they already own.
 
-## The Work
+## What I built
 
-I worked with the Relisted Labels team to design and develop a responsive web application that allows users to browse, rent, and relist fashion items. The platform features a user-friendly interface that makes it easy for users to search for items, view item details, and complete transactions.
-
-The platform also includes a social feature to view each other's listings, and communicate/message with each other. This feature promotes community engagement and encourages users to share their fashion items with others.
+I helped design and build the rental flow, from finding an item to booking it. People could also browse each other's listings and message each other about a piece before renting it.
 
 ### Role
 
-- Fullstack Development
-- UI/UX Design
-- Project Management
-- Quality Assurance
+- Full-stack development
+- UI/UX design
+- Project management
+- Quality assurance

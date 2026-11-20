@@ -17,13 +17,14 @@ const work = defineCollection({
     company: z.string(),
     role: z.string(),
     dateStart: z.coerce.date(),
-    dateEnd: z.union([z.coerce.date(), z.string()]),
+    dateEnd: z.union([z.coerce.date(), z.string()]).optional(),
     website: z.string().optional(),
     description: z.string().optional(),
     logo: z
       .object({
         light: z.string(),
         dark: z.string(),
+        aspectRatio: z.number().positive().optional(),
       })
       .optional(),
   }),

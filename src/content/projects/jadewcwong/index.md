@@ -8,16 +8,16 @@ tags: ["Graphic Design", "Portfolio"]
 technologies: ["Astro", "Tailwind CSS", "Typescript", "Sanity"]
 ---
 
-## The Client
+## The client
 
-Jade is a London-based designer, raised between Hong Kong and UK, with a background in graphic design and a passion for UX. Her value is to provide a user-centred product for users to engage with. She’s enthusiastic about the prospect of experimenting and design digital experiences that truly resonates.
+Jade Wong is a London-based designer with a background in graphic design and an interest in user experience.
 
-## The Work
+## What I built
 
-I worked with Jade to design and develop a portfolio website that showcases their work. The website is filled with user-friendly animations and interactions that makes it easy for visitors to learn more about the designer, view their work details, and contact them.
+Jade and I designed and built her portfolio together. We put her projects up front so visitors could see her work, learn about her experience and get in touch.
 
 ### Role
 
-- Fullstack Development
-- UI/UX Design
-- Project Management
+- Full-stack development
+- UI/UX design
+- Project management

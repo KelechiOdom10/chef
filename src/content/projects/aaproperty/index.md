@@ -1,8 +1,7 @@
 ---
 title: "AA Property UK"
-description: "Leading real estate company serving Central and North-west London"
+description: "A property search and listings site for a London estate agency."
 date: "Oct 26 2021"
-demoURL: "https://aaproperty.vercel.app/"
 repoURL: "https://github.com/KelechiOdom10/aaproperty"
 thumbnail: "./aaproperty.png"
 tags: ["Real Estate", "Property Management", "Web"]
@@ -10,17 +9,15 @@ technologies:
   ["React", "Chakra UI", "Next.js", "Typescript", "Vercel", "Supabase"]
 ---
 
-## The Client
+## The client
 
-AA Property UK is a leading real estate company serving Central and North-west London. The company specializes in property management, sales, and lettings. AA Property UK offers a wide range of services to help clients buy, sell, rent, and manage properties in the London area.
+AA Property UK handles property management, sales and lettings in central and north-west London.
 
-## The Work
+## What I built
 
-I worked with the AA Property UK team to design and develop a responsive web application that showcases the company's services, properties, and team. The web application features a user-friendly interface that makes it easy for visitors to learn more about the company, view property details, and contact the team.
-
-The web application includes a property search feature that allows users to search for properties by location, price range, and property type. Users can view property details, photos, and contact information for each property.
+I worked with the team to design and build a site where visitors could filter listings by location, budget and property type, then view photos and contact the agency about a specific property.
 
 ### Role
 
-- Fullstack Development
-- UI/UX Design
+- Full-stack development
+- UI/UX design

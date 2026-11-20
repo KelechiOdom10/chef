@@ -2,10 +2,9 @@
 company: "Unlikely AI"
 role: "Software Engineer"
 dateStart: "03/06/2025"
-dateEnd: "Current"
 website: "https://unlikely.ai/"
-description: "At Unlikely AI, I’ve helped drive the shift from deep tech research to a product-focused approach. I built insurance-focused POCs that showed how our tech can solve real-world problems, and I designed the frontend architecture that will shape how our products look and scale moving forward"
+description: "I built insurance prototypes that let people try an explainable AI platform on practical problems. I also designed the frontend architecture for future products."
 logo: { light: "/work/unlikelyai.svg", dark: "/work/unlikelyai.svg" }
 ---
 
-At Unlikely AI, I’ve helped drive the shift from deep tech research to a product-focused approach. I built insurance-focused POCs that showed how our tech can solve real-world problems, and I designed the frontend architecture that will shape how our products look and scale moving forward
+I used Next.js and TanStack Query to build insurance prototypes that let people test the team's explainable AI platform on practical problems. I also designed a frontend architecture the team could build on beyond the prototypes.

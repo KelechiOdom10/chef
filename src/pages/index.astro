@@ -1,9 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
-import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { SITE, HOME } from "@consts";
 
@@ -11,12 +9,8 @@ import tools from "@data/svgs.json";
 import ContactSection from "@components/ContactSection.astro";
 import StackCard from "@components/StackCard.astro";
 import WorkSection from "@components/WorkSection.astro";
+import PersonalProjects from "@components/PersonalProjects.astro";
 import { SpotifyNowPlaying } from "@components/NowPlaying";
-
-const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
 const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
 ---
@@ -36,21 +30,19 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
         <h4 class="font-semibold text-black dark:text-white">
           Hi, I'm Kelechi <span class="text-xl">👋🏽</span>
         </h4>
-        <p class="text-opacity-55">Product Engineer</p>
+        <p class="text-opacity-55">Senior Full-Stack Product Engineer</p>
       </div>
     </div>
     <div class="space-y-16">
       <section>
         <article class="space-y-4 mb-4">
           <p class="animate">
-            I am a fullstack software engineer from 🇳🇬 Nigeria, currently based
-            in 🇬🇧 London. With a passion for engineering, product and
-            craftsmanship. I enjoy building out polished digital products people
-            love.
+            I'm from Nigeria and based in London. I build AI features people
+            use at work, from finding answers in HR data to reviewing
+            contracts in Word.
           </p>
           <p class="animate">
-            Outside programming, my interests include but are not lmited to
-            startups, football, gaming, music and anime
+            Outside work, I'm into football, gaming, music and anime.
           </p>
         </article>
 
@@ -60,7 +52,7 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
-            Work Experience
+            Work experience
           </h5>
           <Link href="/work" className="text-[15px]"> See all work </Link>
         </div>
@@ -73,21 +65,13 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
-            Recent projects
+            Personal projects
           </h5>
           <Link href="/projects" className="text-[15px]">
             See all projects
           </Link>
         </div>
-        <ul class="flex flex-col gap-4">
-          {
-            projects.map(project => (
-              <li>
-                <ArrowCard entry={project} />
-              </li>
-            ))
-          }
-        </ul>
+        <PersonalProjects />
       </section>
 
       <section class="animate space-y-6">
@@ -97,7 +81,7 @@ const dailyTools = tools.filter(tool => tool.daily).slice(0, 10);
             <!-- <Link href="/tools"> See all tools </Link> -->
           </div>
           <p class="text-opacity-60 text-sm">
-            Tools I use daily to get things done.
+            Tools I use day to day.
           </p>
         </div>
         <ul class="grid grid-cols-2 md:grid-cols-2 gap-x-8 gap-y-5">

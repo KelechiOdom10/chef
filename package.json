@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "dev:network": "astro dev --host",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && node src/scripts/check-project-icons.mjs",
+    "smoke:tech-icons": "node src/scripts/check-project-icons.mjs",
     "preview": "astro preview",
     "preview:network": "astro preview --host",
     "astro": "astro",
