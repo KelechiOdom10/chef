@@ -4,6 +4,7 @@ role: "Senior Software Engineer"
 dateStart: "2025-05-01"
 dateEnd: "Present"
 website: "https://humaans.io/"
+logo: { light: "/work/humaans.webp", dark: "/work/humaans.webp" }
 description: "I helped rebuild AI Companion so people can ask questions about their HR data and get answers as charts, tables, or links to source documents, in Humaans or Slack. I also worked on AI credits and helped build the MCP server so other AI tools can work with data people already have permission to see."
 ---
 

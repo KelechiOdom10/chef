@@ -1,6 +1,6 @@
 ---
 title: "Fusion"
-description: "The simplest way to do brain and behaviour research right from your browser."
+description: "Open-source contribution to a platform for brain and behaviour research in the browser."
 date: "Jun 12 2024"
 demoURL: "https://usefusion.ai/"
 repoURL: "https://github.com/NEUROFUSIONInc/fusion"

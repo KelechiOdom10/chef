@@ -39,6 +39,24 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
   image={project.data.thumbnail?.src}
 >
   <Container>
+    {
+      project.data.thumbnail && (
+        <div
+          transition:name={`project-image-${project.slug}`}
+          class="mb-6 aspect-video overflow-hidden rounded-lg"
+        >
+          <Image
+            src={project.data.thumbnail}
+            alt={project.data.title}
+            width={1200}
+            height={600}
+            loading="eager"
+            fetchpriority="high"
+            class="size-full object-cover object-top"
+          />
+        </div>
+      )
+    }
     <div class="animate">
       <BackToPrev href="/projects"> Back to projects </BackToPrev>
     </div>
@@ -80,20 +98,6 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
         )
       }
     </div>
-    {
-      project.data.thumbnail && (
-        <div class="animate">
-          <Image
-            src={project.data.thumbnail}
-            alt={project.data.title}
-            width={1200}
-            height={600}
-            loading="eager"
-            class="w-full aspect-video object-cover object-top rounded-lg border dark:border-black/15"
-          />
-        </div>
-      )
-    }
     <article class="animate">
       <Content />
     </article>

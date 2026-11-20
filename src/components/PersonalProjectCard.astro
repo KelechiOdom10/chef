@@ -77,17 +77,31 @@ const { title, description, href, image } = Astro.props;
 </style>
 
 <script>
-  for (const link of document.querySelectorAll<HTMLAnchorElement>("[data-project-link]")) {
-    link.addEventListener("pointermove", event => {
-      if (event.pointerType !== "mouse") return;
-      const bounds = link.getBoundingClientRect();
-      link.style.setProperty("--view-x", `${event.clientX - bounds.left - link.clientLeft}px`);
-      link.style.setProperty("--view-y", `${event.clientY - bounds.top - link.clientTop}px`);
-      link.setAttribute("data-view-active", "");
-    });
+  let activeLink: HTMLAnchorElement | null = null;
 
-    for (const eventName of ["pointerleave", "pointercancel"]) {
-      link.addEventListener(eventName, () => link.removeAttribute("data-view-active"));
-    }
+  function clearView() {
+    activeLink?.removeAttribute("data-view-active");
+    activeLink = null;
   }
+
+  document.addEventListener("pointermove", event => {
+    if (event.pointerType !== "mouse" || !(event.target instanceof Element)) return;
+    const link = event.target.closest<HTMLAnchorElement>("[data-project-link]");
+    if (link !== activeLink) clearView();
+    if (!link) return;
+
+    const bounds = link.getBoundingClientRect();
+    link.style.setProperty("--view-x", `${event.clientX - bounds.left - link.clientLeft}px`);
+    link.style.setProperty("--view-y", `${event.clientY - bounds.top - link.clientTop}px`);
+    link.setAttribute("data-view-active", "");
+    activeLink = link;
+  });
+
+  document.addEventListener("pointerout", event => {
+    if (!(event.relatedTarget instanceof Node) || !activeLink?.contains(event.relatedTarget)) {
+      clearView();
+    }
+  });
+  document.addEventListener("pointercancel", clearView);
+  document.addEventListener("astro:before-swap", clearView);
 </script>
