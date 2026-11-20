@@ -61,6 +61,11 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
       <BackToPrev href="/projects"> Back to projects </BackToPrev>
     </div>
     <div class="space-y-1 my-10">
+      <h1
+        class="animate text-2xl lg:text-3xl font-semibold text-black dark:text-white"
+      >
+        {project.data.title}
+      </h1>
       <div class="animate flex items-center gap-1.5">
         <div class="font-base text-sm">
           <FormattedDate date={project.data.date} />
@@ -70,11 +75,6 @@ const techStack = findMatchingSVGs(project.data?.technologies || []);
           {readingTime(project.body)}
         </div>
       </div>
-      <h1
-        class="animate text-2xl lg:text-3xl font-semibold text-black dark:text-white"
-      >
-        {project.data.title}
-      </h1>
       {
         project.data.description && (
           <p class="animate">{project.data.description}</p>
