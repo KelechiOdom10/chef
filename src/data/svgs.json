@@ -33,7 +33,7 @@
     "category": "Software",
     "route": "/tools/capy.svg",
     "url": "https://capy.ai/",
-    "description": "AI coding assistant",
+    "description": "It's seriously that good",
     "daily": true
   },
   {
@@ -142,7 +142,7 @@
     "category": "AI",
     "route": "/tools/claude.svg",
     "url": "https://claude.com/",
-    "description": "AI assistant",
+    "description": "Enough said.",
     "daily": true
   },
   {
